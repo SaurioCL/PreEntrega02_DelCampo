@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+            <p>¡Hola <span id="nombreCompleto">Nombre</span>!</p>
+                <h2>Intrucciones:</h2>
+                <p>- Agrega las tareas a completar y la hora del día. (Ej:Hacer la cena, 19:00)</p>
+                <p>- Si te equivocaste al agregar una tarea presiona "Eliminar".</p>
+                <p>- Si ya completaste alguna tarea, haz clic encima de esta.</p>
+                <p>- Haz clic en la lista de tareas para que se organicen por horas.</p>
+        <form id="taskForm">
+            <label for="taskInput">Nueva Tarea:</label>
+            <input type="text" id="taskInput" required>
+            <label for="taskTime">Hora:</label>
+            <input type="time" id="taskTime" required>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <div>
+            <label for="searchInput">Buscar Tareas:</label>
+            <input type="text" id="searchInput">
+        </div>
+
+        <button id="filterCompletedButton">Filtrar Completadas</button>
+
+        <button id="showAllButton">Mostrar Todas</button>
+
+        <ul id="taskList"></ul>
+    </div>
+    <script src="./JS/app.js"></script>
+</body>
+</html>
